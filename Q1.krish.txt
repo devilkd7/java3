@@ -1,0 +1,31 @@
+Q1
+class Continent {
+protected String continentName;
+public Continent(String continentName) {
+this.continentName = continentName;
+}
+}
+
+class State extends Country {
+protected String stateName;
+protected String placeName;
+public State(String continentName, String countryName, String
+stateName, String placeName) {
+super(continentName, countryName);
+Country
+this.stateName = stateName;
+this.placeName = placeName;
+}
+public void displayDetails() {
+System.out.println("Place: " + placeName);
+System.out.println("State: " + stateName);
+System.out.println("Country: " + countryName);
+System.out.println("Continent: " + continentName);
+}
+}
+public class MultilevelInheritance {
+public static void main(String[] args) {
+State state = new State("Asia", "India", "Maharashtra", "Mumbai");
+state.displayDetails();
+}
+}
